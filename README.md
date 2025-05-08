@@ -31,3 +31,35 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    # o
    git clone git@github.com:AlejandroMBP/tesoreria.git
    cd tesoreria
+
+2. **Instala las dependencias de PHP:**
+   ```bash
+   composer install
+   
+3. **Copie el archivo de entorno:**
+   ```bash
+   cp .env.example .env
+   
+4. **Luego edita el archivo .env y reemplaza la configuración de SQLite por la de MySQL:**
+   ```bash
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=nombre_de_tu_base
+   DB_USERNAME=tu_usuario
+   DB_PASSWORD=tu_contraseña
+5. **Genera la clave de aplicación:**
+   ```bash
+   php artisan key:generate
+
+6. **Crea la base de datos si no existe:**
+
+7. **Ejecuta las migraciones:**
+   ```bash
+   php artisan migrate
+8. **Inicia el servidor local:**
+   ```bash
+   php artisan serve
+🎉 ¡Listo!
+Tu aplicación estará corriendo en:
+http://localhost:8000
